@@ -9,11 +9,12 @@ resource "aws_instance" "frontend" {
 }
 
 provisioner "remote-exec" {
- connection {
+
+  connection {
   type     = "ssh"
   user     = "ec2-user"
   password = "DevOps321"
-  host     = self.public_ip
+  host     = "self.public_ip"
 }
 
 provisioner "remote-exec" {
