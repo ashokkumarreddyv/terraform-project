@@ -18,7 +18,7 @@ resource "aws_instance" "frontend" {
 
 
     inline = [
-      "pip3.11 install ansible",
+      "sudo pip3.11 install ansible",
       "ansible-pull -i localhost, -u https://github.com/ashokkumarreddyv/roboshop roboshop.yml -e component_name=frontend -e env=dev",
     ]
 
