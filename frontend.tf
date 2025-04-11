@@ -24,7 +24,7 @@ resource  "null_resource" "frontend" {
 
     inline = [
       "sudo pip3.11 install ansible",
-      "ansible-pull -i localhost, -U https://github.com/ashokkumarreddyv/Ansible-project roboshop.yml -e component_name=cart -e env=dev"
+      "ansible-pull -i localhost, -U https://github.com/ashokkumarreddyv/Ansible-project roboshop.yml -e component_name=mysql -e env=dev"
     ]
 
   }
