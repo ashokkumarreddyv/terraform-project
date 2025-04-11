@@ -14,8 +14,8 @@ resource "aws_instance" "frontend" {
    type     = "ssh"
    user     = "ec2-user"
    password = "DevOps321"
-   host     = "self.public_ip"
- }
+   host     = self.public_ip
+  }
 
 
   inline = [
