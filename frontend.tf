@@ -8,7 +8,7 @@ resource "aws_instance" "frontend" {
   }
 }
 
-provisioner "remote-exec" {
+ provisioner "remote-exec" {
 
   connection {
    type     = "ssh"
