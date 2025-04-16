@@ -13,7 +13,7 @@ variable "vpc_security_group_ids" {
 
 variable "instances" {
   default = [
-  "frontend"
+  "frontend",
   "Mongodb",
   "catalogue",
   "Redis",
