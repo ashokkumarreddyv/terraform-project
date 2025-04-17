@@ -1,10 +1,4 @@
-variable "ami_id" {
-  default = "ami-09c813fb71547fc4f"
-}
 
-variable "instance_type" {
-  default = "t3.small"
-}
 
 variable "vpc_security_group_ids" {
   default = ["sg-07b6cb1ebb35644ea"]
@@ -13,10 +7,22 @@ variable "vpc_security_group_ids" {
 
 variable "instances" {
   default = {
-    frontend = null
-    catalogue = null
-    mangodb = null
-    cart = null
+    frontend = {
+      ami_id = "ami-09c813fb71547fc4f"
+      instance_type = "t3.small"
+    }
+    catalogue = {
+      ami_id = "ami-09c813fb71547fc4f"
+      instance_type = "t3.small"
+    }
+    mangodb = {
+      ami_id = "ami-09c813fb71547fc4f"
+      instance_type = "t3.small"
+    }
+    cart = {
+      ami_id = "ami-09c813fb71547fc4f"
+      instance_type = "t3.small"
+    }
   }
 
 
