@@ -28,4 +28,10 @@ variable "instances" {
 
 }
 
-#@jbdmdll
+variable "env" {
+  default = "env"
+}
+
+# variable "zone_id" {
+#   default = ""
+# }
