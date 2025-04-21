@@ -1,6 +1,6 @@
 resource "aws_instance" "instance" {
   ami           = var.ami_id
-  instance_type = varinstance_type
+  instance_type = var.instance_type
   vpc_security_group_ids = var.vpc_security_group_ids
   # zone_id = var.zone_id
 
