@@ -23,3 +23,5 @@ prod-destroy:
   terraform init -backend-config=env-dev/state.tfvars
   terraform destroy  -auto-approve -var-file=env/main.tfvars
 
+  #
+
