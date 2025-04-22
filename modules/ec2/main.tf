@@ -10,26 +10,26 @@ resource "aws_instance" "instance" {
 
 }
 
-# resource  "null_resource" "frontend" {
-#
-#   provisioner "remote-exec" {
-#
-#     connection {
-#       type     = "ssh"
-#       user     = "ec2-user"
-#       password = "DevOps321"
-#       host     = aws_instance.frontend.public_ip
-#     }
-#
-#
-#     inline = [
-#       "sudo pip3.11 install ansible",
-#       "ansible-pull -i localhost, -U https://github.com/ashokkumarreddyv/Ansible-project roboshop.yml -e component_name=mysql -e env=dev"
-#     ]
-#
-#   }
-#
-# }
+resource  "null_resource" "frontend" {
+
+  provisioner "remote-exec" {
+
+    connection {
+      type     = "ssh"
+      user     = "ec2-user"
+      password = "DevOps321"
+      host     = aws_instance.instance.private_ip
+    }
+
+
+    inline = [
+      "sudo pip3.11 install ansible",
+      "ansible-pull -i localhost, -U https://github.com/ashokkumarreddyv/Ansible-project roboshop.yml -e component_name=$(var.name) -e env=$(var.env)"
+    ]
+
+  }
+
+}
 
 ###
 
